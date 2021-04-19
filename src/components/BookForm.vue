@@ -13,7 +13,9 @@ export default {
   data() {
     return {
       bookTitle: "",
-      bookAuthor: ""
+      bookAuthor: "",
+      finishedReading: false,
+      ownership: []
     };
   },
   methods: {

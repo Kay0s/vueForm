@@ -10,7 +10,7 @@
     <input v-model="bookData.ownership" type="radio" name="borrowed" value="borrowed">
     <label for="bought">bought</label>
     <input v-model="bookData.ownership" type="radio" name="bought" value="bought">
-    <button type="submit" name="button">Add Book</button>
+    <button type="submit" name="button" v-on:submit.prevent="bookSubmit(bookData)">Add Book</button>
   </form>
 </template>
 
@@ -22,6 +22,7 @@ export default {
     return {
       bookTitle: "",
       bookAuthor: "",
+      bookData: "",
       finishedReading: false,
       ownership: []
     };

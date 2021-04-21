@@ -35,6 +35,9 @@ export default {
     };
   },
   computed: {
+    filteredBooks() {
+      return _.filter(this.books, ["ownership", this.holding]);
+    }
 
   },
   components: {

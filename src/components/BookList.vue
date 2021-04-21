@@ -8,6 +8,9 @@
     <select v-model="holding">
       <option v-for='filter in filters' :key='filter.id' :filter='filter'>{{ filter }}</option>
     </select>
+    <ul>
+      <book-item v-for='book in filteredBooks' :key='book.id' :book='book'></book-item>
+    </ul>
     <br><hr>
     <book-form @addBook='appendBook'></book-form>
   </div>

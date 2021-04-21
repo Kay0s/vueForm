@@ -6,6 +6,7 @@
     </ul>
     <hr><h2>Filtered Books by Ownership</h2>
     <select v-model="holding">
+      <option v-for='filter in filters' :key='filter.id' :filter='filter'>{{ filter }}</option>
     </select>
     <br><hr>
     <book-form @addBook='appendBook'></book-form>

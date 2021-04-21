@@ -4,6 +4,7 @@
     <ul>
       <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
     </ul>
+    <hr><h2>Filtered Books by Ownership</h2>
     <br><hr>
     <book-form @addBook='appendBook'></book-form>
   </div>

@@ -19,7 +19,7 @@ export default {
     return {
       title: "All Books",
       states: ["Want to Read", "Read", "Reading"],
-      filters:["bought, borrowed"],
+      filters:["bought", "borrowed"],
       holding: "bought",
       books: [
         { title: "Self-Reliance", author: "Ralph Waldo Emerson", finishedReading: true, ownership: "borrowed" },

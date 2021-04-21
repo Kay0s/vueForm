@@ -34,6 +34,9 @@ export default {
     
     };
   },
+  computed: {
+
+  },
   components: {
     BookItem,
     BookForm

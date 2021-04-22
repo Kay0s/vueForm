@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       title: "All Books",
+      searchInput: "",
       states: ["Want to Read", "Read", "Reading"],
       filters:["bought", "borrowed"],
       holding: "bought",
@@ -41,8 +42,12 @@ export default {
   computed: {
     filteredBooks() {
       return _.filter(this.books, ["ownership", this.holding]);
+    },
+    searchedBooks() {
+    const searchFilter = book => {
+      return book.title.toLowerCase().match(this.searchInput.toLowerCase());
+    };
     }
-
   },
   components: {
     BookItem,

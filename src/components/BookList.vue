@@ -3,7 +3,7 @@
     <h1>{{title}}</h1>
     <input type="text" placeholder="Search Books" v-model="searchInput">
     <ul>
-      <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
+      <book-item v-for='book in searchedBooks' :key='book.id' :book='book'></book-item>
     </ul>
     <hr><h2>Filtered Books by Ownership</h2>
     <select v-model="holding">
